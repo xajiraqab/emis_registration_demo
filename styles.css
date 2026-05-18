@@ -81,7 +81,7 @@ a {
 }
 
 a.disabled {
-    filter: grayscale(1);
+    background-color: gray;
     pointer-events: none;
 }
 
