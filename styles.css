@@ -4,8 +4,6 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-
-
 }
 
 * {
@@ -244,4 +242,13 @@ footer {
     display: block;
     margin: 0;
     flex-shrink: 0;
+}
+
+div.demo-warning-hehe {
+    background: crimson;
+    color: white;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    line-height: initial;
+    text-align: center;
 }
