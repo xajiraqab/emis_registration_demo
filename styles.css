@@ -81,7 +81,7 @@ a {
 }
 
 a.disabled {
-    background-color: gray;
+    background-color: gray !important;
     pointer-events: none;
 }
 
