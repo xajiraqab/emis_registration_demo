@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>jx - ᲞᲘᲠᲕᲔᲚᲙᲚᲐᲡᲔᲚᲗᲐ ᲠᲔᲒᲘᲡᲢᲠᲐᲪᲘᲐ ᲡᲐᲯᲐᲠᲝ ᲡᲙᲝᲚᲔᲑᲨᲘ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- <link rel="stylesheet" href="./styles.css" /> -->
+    <link rel="stylesheet" href="./registration.css" />
+  </head>
+  <body style="position: relative">
+    <table class="mainTable">
+      <tbody>
+        <tr>
+          <div class="demo-warning-hehe noto-sans-georgian">
+            ეს საიტი შექმნილია მხოლოდ სავარჯიშოდ და რეალურ სერვისს არ
+            წარმოადგენს. მისი მიზანია პრაქტიკა და რეალური გარემოსთვის მომზადება.
+          </div>
+        </tr>
+        <tr>
+          <td valign="top">
+            <div class="header-top">
+              <a
+                href="http://mes.gov.ge/"
+                target="_blank"
+                title="განათლების, მეცნიერებისა და ახალგაზრდობის სამინისტრო"
+              >
+                <img
+                  src="/images/logo-mes.svg"
+                  alt="განათლების, მეცნიერებისა და ახალგაზრდობის სამინისტრო"
+                />
+                <p>ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡ, ᲛᲔᲪᲜᲘᲔᲠᲔᲑᲘᲡᲐ ᲓᲐ ᲐᲮᲐᲚᲒᲐᲖᲠᲓᲝᲑᲘᲡ ᲡᲐᲛᲘᲜᲘᲡᲢᲠᲝ</p>
+              </a>
+            </div>
+            <div class="header">
+              <span class="noto-sans-georgian">
+                ᲞᲘᲠᲕᲔᲚᲙᲚᲐᲡᲔᲚᲗᲐ ᲠᲔᲒᲘᲡᲢᲠᲐᲪᲘᲐ ᲡᲐᲯᲐᲠᲝ ᲡᲙᲝᲚᲔᲑᲨᲘ
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <div id="registrationBody">
+              <div id="wizard" class="wizard" style="display: block">
+                <div class="steps">
+                  <ul class="anchor">
+                    <li>
+                      <a class="selected" id="aStep1" href="#">
+                        <label class="stepNumber">1</label>
+                        <div class="stepDesc1">მოსწავლე</div>
+                        <div class="stepDesc2">მოსწავლის მონაცემები</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="disabled" id="aStep2" href="#">
+                        <label class="stepNumber">2</label>
+                        <div class="stepDesc1">მშობელი</div>
+                        <div class="stepDesc2">მშობლის მონაცემები</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="disabled" id="aStep3" href="#">
+                        <label class="stepNumber">3</label>
+                        <div class="stepDesc1">სკოლა</div>
+                        <div class="stepDesc2">სკოლის მონაცემები</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="disabled" id="aStep4" href="#">
+                        <label class="stepNumber">4</label>
+                        <div class="stepDesc1">რეგისტრაცია</div>
+                        <div class="stepDesc2" style="font-size: 12px">
+                          რეგისტრაციის დასრულება
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <form
+                  action="#"
+                  method="POST"
+                  class="mainForm"
+                  id="mainForm"
+                  autocomplete="off"
+                  style="position: relative"
+                >
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    value="1"
+                    id="geoKeys"
+                    name="geoKeys"
+                    style="display: none"
+                  />
+                  <div
+                    id="loadingIndicator"
+                    class="bbEnabled"
+                    style="height: 100%"
+                  ></div>
+                  <div class="formContainerStep" id="formContainerStep1">
+                    <div class="headerInfo">მოსწავლის პირადი მონაცემები</div>
+                    <div class="messageInfo">
+                      <ul>
+                        <li id="step0headerlisttext" style="display: none">
+                          მიმდინარეობს სსსმ პირების რეგისტრაცია;
+                        </li>
+                        <li id="step1headerlisttext">
+                          შესაბამის ველებში მიუთითეთ, ბავშვის პირადი ნომერი,
+                          სახელი და გვარი;
+                        </li>
+                        <li>
+                          რეგისტრაციის გაგრძელების მიზნით დააჭირეთ ღილაკს
+                          „შემდეგი”
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <fieldset
+                        id="st0HeaderText"
+                        class="LegengDiv"
+                        style="display: none"
+                      >
+                        <legend>რეგისტრაციის ეტაპი *</legend>
+                        <table class="fieldsetTable">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <input
+                                  type="radio"
+                                  checked=""
+                                  name="st1Stage0Rb"
+                                  id="st1Stage0Rb"
+                                />
+                                <label for="st1Stage0Rb">
+                                  სპეციალური საგანმანათლებლო საჭიროების
+                                  მქონე</label
+                                >
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </fieldset>
+                      <fieldset
+                        id="fieldCitizenship"
+                        class="LegengDiv"
+                        style="display: none"
+                      >
+                        <legend>მოქალაქეობა *</legend>
+                        <table id="rbCitizenship" class="fieldsetTable">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <input
+                                  type="radio"
+                                  checked="checked"
+                                  value="1"
+                                  name="rbCitizenship"
+                                  id="st1Citizenship_0"
+                                />
+                                <label for="st1Citizenship_0">
+                                  საქართველოს მოქალაქე/ბინადრობის მოწმობის
+                                  მქონე</label
+                                >
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input
+                                  type="radio"
+                                  value="2"
+                                  name="rbCitizenship"
+                                  id="st1Citizenship_1"
+                                />
+                                <label for="st1Citizenship_1">
+                                  უცხო ქვეყნის მოქალაქე/ბინადრობის მოწმობის არ
+                                  მქონე</label
+                                >
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </fieldset>
+                    </div>
+
+                    <div>
+                      <fieldset class="LegengDiv">
+                        <legend>მოსწავლის პირადი მონაცემები</legend>
+                        <table
+                          align="center"
+                          style="padding-top: 15px; padding-top: 10px"
+                        >
+                          <tbody>
+                            <tr id="trst1PersonalNumber">
+                              <td align="right">
+                                <label for="st1PersonalNumber"
+                                  >პირადი ნომერი:</label
+                                >
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  style="width: 200px"
+                                  id="st1PersonalNumber"
+                                  name="st1PersonalNumber"
+                                />
+                                <span class="reqField">*</span>
+                                <span
+                                  style="
+                                    color: red;
+                                    font-weight: bold;
+                                    display: none;
+                                  "
+                                  id="rfvPIN"
+                                ></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="right">
+                                <label for="st1FirstName">სახელი:</label>
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  style="width: 200px"
+                                  id="st1FirstName"
+                                  name="st1FirstName"
+                                />
+                                <span class="reqField">*</span>
+                                <span
+                                  style="display: none"
+                                  id="rfvFirstName"
+                                ></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="right">
+                                <label for="st1LastName">გვარი:</label>
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  style="width: 200px"
+                                  id="st1LastName"
+                                  name="st1LastName"
+                                />
+                                <span class="reqField">*</span>
+                                <span
+                                  style="display: none"
+                                  id="st1LastName"
+                                ></span>
+                              </td>
+                            </tr>
+                            <tr id="trst1BirthDate" style="display: none">
+                              <td align="right">
+                                <label for="st1BirthDate"
+                                  >დაბადების თარიღი</label
+                                >
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  style="width: 180px"
+                                  id="st1BirthDate"
+                                  name="st1BirthDate"
+                                />
+                                <img
+                                  onclick="
+                                    displayCalendar(
+                                      document.forms[1].st1BirthDate,
+                                      'dd/mm/yyyy',
+                                      this,
+                                    )
+                                  "
+                                  value="Cal"
+                                  alt=""
+                                  src="images/cal.gif"
+                                />
+                                <span class="reqField">*</span>
+                                <span
+                                  style="display: none"
+                                  id="rvfBirthDate"
+                                ></span>
+                                <span
+                                  style="display: none"
+                                  id="rxBirthDate"
+                                ></span>
+                              </td>
+                            </tr>
+                            <tr id="trst1Gender" style="display: none">
+                              <td align="right">
+                                <label for="st1Gender">სქესი:</label>
+                              </td>
+                              <td>
+                                <select
+                                  style="width: 204px"
+                                  id="st1Gender"
+                                  name="st1Gender"
+                                >
+                                  <option value="-1" selected="selected">
+                                    ----აირჩიეთ----
+                                  </option>
+                                  <option value="0">მდედრობითი</option>
+                                  <option value="1">მამრობითი</option>
+                                </select>
+                                <span class="reqField">*</span>
+                                <span
+                                  style="display: none"
+                                  id="rfListGender"
+                                ></span>
+                              </td>
+                            </tr>
+                            <tr id="trst1Country" style="display: none">
+                              <td align="right">
+                                <label for="st1Country">ქვეყანა:</label>
+                              </td>
+                              <td>
+                                <select
+                                  style="width: 204px"
+                                  id="st1Country"
+                                  name="st1Country"
+                                >
+                                  <option value="-1" selected="selected">
+                                    ----აირჩიეთ----
+                                  </option>
+                                </select>
+                                <span class="reqField">*</span>
+                                <span
+                                  style="display: none"
+                                  id="rfCiticenship"
+                                ></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </fieldset>
+                    </div>
+                    <table align="center">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div style="color: red" id="errorDivMsgStep1"></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div style="color: red" id="errorDivMsgStep1"></div>
+                  </div>
+                  <div
+                    class="formContainerStep"
+                    id="formContainerStep2"
+                    style="display: none"
+                  >
+                    <div class="headerInfo">
+                      მშობლის მონაცემები და საკონტაქტო ინფორმაცია
+                    </div>
+                    <div class="messageInfo">
+                      <ul>
+                        <li>
+                          შესაბამის ველებში მიუთითეთ ერთ-ერთი მშობლის
+                          (დედა/მამა/მეურვე/მზრუნველი) პირადი ნომერი, სახელი,
+                          გვარი, მობილური ტელეფონის ნომერი და ელექტრონული ფოსტა;
+                        </li>
+                        <li>
+                          რეგისტრაციის გაგრძელების მიზნით დააჭირეთ ღილაკს
+                          „შემდეგი”
+                        </li>
+                      </ul>
+                    </div>
+                    <fieldset class="LegengDiv">
+                      <legend>მშობლის მონაცემები</legend>
+                      <table
+                        align="center"
+                        style="padding-top: 10px; padding-top: 20px"
+                      >
+                        <tbody>
+                          <tr>
+                            <td align="right">მშობელი:</td>
+                            <td>
+                              <select
+                                style="width: 206px"
+                                id="st2ListParentType"
+                                name="st2ListParentType"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                                <option value="დედა">დედა</option>
+                                <option value="მამა">მამა</option>
+                                <option value="მეურვე/მზრუნველი">
+                                  მეურვე/მზრუნველი
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                              <span
+                                style="display: none"
+                                id="rfParentType"
+                              ></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">პირადი ნომერი:</td>
+                            <td>
+                              <input
+                                type="text"
+                                style="width: 200px"
+                                id="st2ParentPersonalNumber"
+                                name="st2ParentPersonalNumber"
+                              />
+                              <span class="reqField">*</span>
+                              <span
+                                style="display: none"
+                                id="rfParentPersonalNumber"
+                              ></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">სახელი:</td>
+                            <td>
+                              <input
+                                type="text"
+                                style="width: 200px"
+                                id="st2ParentFirstName"
+                                name="st2ParentFirstName"
+                              />
+                              <span class="reqField">*</span>
+                              <span
+                                style="display: none"
+                                id="rfvParentFirstName"
+                              ></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">გვარი:</td>
+                            <td>
+                              <input
+                                type="text"
+                                style="width: 200px"
+                                id="st2ParentLastName"
+                                name="st2ParentLastName"
+                              />
+                              <span class="reqField">*</span>
+                              <span
+                                style="display: none"
+                                id="rfvParentLastName"
+                              ></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">
+                              <label for="st2listPhoneIndex"
+                                >მობილური ტელეფონის ნომერი:</label
+                              >
+                            </td>
+                            <td>
+                              <span id="frPhoneIndex">+995</span>
+                              <input
+                                type="text"
+                                style="width: 163px"
+                                id="st2PhoneNumber"
+                                name="st2PhoneNumber"
+                                placeholder="5XX XXXXXX"
+                              />
+                              <span class="reqField">*</span>
+                              <span
+                                style="display: none"
+                                id="rfvPhoneNumber"
+                              ></span>
+                              <span
+                                style="display: none"
+                                id="rxPhoneNumber"
+                              ></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">ელ.ფოსტა:</td>
+                            <td>
+                              <input
+                                type="text"
+                                style="width: 200px"
+                                id="stEmail"
+                                name="stEmail"
+                              />
+                              <span style="display: none" id="rxEmail"></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table align="center">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div
+                                style="color: red"
+                                id="errorDivMsgStep2"
+                              ></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </fieldset>
+                  </div>
+                  <div
+                    class="formContainerStep"
+                    id="formContainerStep3"
+                    style="display: none"
+                  >
+                    <div class="headerInfo">აირჩიეთ სასურველი სკოლა</div>
+                    <div class="messageInfo">
+                      <ul>
+                        <li id="messageInfoField">
+                          ჩამოსაშლელი ველების საშუალებით ამოირჩიეთ ქალაქი,
+                          სასკოლო უბანი, სასურველი სკოლა, სექტორი, ცვლა და
+                          სკოლის შენობა
+                        </li>
+                        <li>
+                          რეგისტრაციის გაგრძელების მიზნით დააჭირეთ ღილაკს
+                          „დასრულება”
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="messageAlert">
+                      <ul>
+                        <li>
+                          ყურადღება მიაქციეთ თავისუფალი ადგილების რაოდენობას!
+                        </li>
+                        <li>
+                          გაითვალისწინეთ, მონაცემები იცვლება დინამიურ რეჟიმში!
+                        </li>
+                      </ul>
+                    </div>
+                    <fieldset class="LegengDiv">
+                      <legend>აირჩიეთ სასურველი სკოლა</legend>
+                      <table align="center" style="padding-top: 15px">
+                        <tbody>
+                          <tr id="st3CityRow" style="">
+                            <td align="right">ქალაქი:</td>
+                            <td>
+                              <select
+                                style="width: 300px"
+                                id="st3ListCity"
+                                name="st3ListCity"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+                          <tr id="st3BlockRow" style="">
+                            <td align="right">სასკოლო უბანი:</td>
+                            <td>
+                              <select
+                                style="width: 300px"
+                                id="st3ListBlock"
+                                name="st3ListBlock"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+                          <tr id="st3RegionRow" style="display: none">
+                            <td align="right">რეგიონი:</td>
+                            <td>
+                              <select
+                                style="width: 300px"
+                                id="st3ListRegion"
+                                name="st3ListRegion"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+                          <tr id="st3DistrictRow" style="display: none">
+                            <td align="right">რაიონი:</td>
+                            <td>
+                              <select
+                                style="width: 300px"
+                                id="st3ListDistrict"
+                                name="st3ListDistrict"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">სკოლა:</td>
+                            <td>
+                              <select
+                                style="width: 300px; max-width: 400px"
+                                id="st3ListSchool"
+                                name="st3ListSchool"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">სექტორი:</td>
+                            <td>
+                              <select
+                                style="width: 300px"
+                                id="st3ListSector"
+                                name="st3ListSector"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+                          <tr id="st3ShiftRow" style="">
+                            <td align="right">ცვლა:</td>
+                            <td>
+                              <select
+                                style="width: 300px"
+                                id="st3ListShift"
+                                name="st3ListShift"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+                          <tr id="st3SchoolBuildingRow" style="display: none">
+                            <td align="right">შენობა:</td>
+                            <td>
+                              <select
+                                style="width: 300px"
+                                id="st3ListSchoolBuilding"
+                                name="st3ListSchoolBuilding"
+                              >
+                                <option value="-1" selected="selected">
+                                  ----აირჩიეთ----
+                                </option>
+                              </select>
+                              <span class="reqField">*</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td align="right"></td>
+                            <td>
+                              <br />
+                              <span
+                                class="criticalError"
+                                id="st3LabelRemaining"
+                              ></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div id="loadingFree" class="bbDisabled"></div>
+                      <table align="center">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div
+                                style="color: red"
+                                id="errorDivMsgStep3"
+                              ></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </fieldset>
+                    <div
+                      class="messageInfo"
+                      id="schoolWithMessageDiv"
+                      style="display: none; color: red"
+                    >
+                      <ul>
+                        <li id="schoolWithMessageText"></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="formContainerStep"
+                    id="formContainerStep4"
+                    style="display: none"
+                  >
+                    <div class="headerInfo" id="st4RegistrationStatus"></div>
+                    <div class="messageInfo">
+                      <ul>
+                        <li>
+                          გაითვალისწინეთ, რეგისტრაციის პროცესში მითითებული
+                          ინფორმაციის სისწორეზე პასუხისმგებელია პირი, რომელიც
+                          უშუალოდ ახდენს ბავშვის რეგისტრაციას
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <table align="center" class="info">
+                        <tbody>
+                          <tr>
+                            <td align="right">სკოლა:</td>
+                            <td><div id="st4School"></div></td>
+                          </tr>
+                          <tr id="tr4SchoolBuilding" style="display: none">
+                            <td align="right">შენობა:</td>
+                            <td><div id="st4SchoolBuilding"></div></td>
+                          </tr>
+                          <tr>
+                            <td align="right">პირადი ნომერი:</td>
+                            <td>
+                              <div
+                                id="st4PersonalNumber"
+                                style="font-weight: bold"
+                              ></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">სახელი:</td>
+                            <td><div id="st4FirstName"></div></td>
+                          </tr>
+                          <tr>
+                            <td align="right">გვარი:</td>
+                            <td><div id="st4LastName"></div></td>
+                          </tr>
+                          <tr>
+                            <td align="right">რეგისტრატორი:</td>
+                            <td><div id="st4Registrator"></div></td>
+                          </tr>
+                          <tr>
+                            <td align="right">სახელი:</td>
+                            <td><div id="st4ParentName"></div></td>
+                          </tr>
+                          <tr>
+                            <td align="right">გვარი:</td>
+                            <td><div id="st4ParentSurname"></div></td>
+                          </tr>
+                          <tr>
+                            <td align="right">მობილური:</td>
+                            <td><div id="st4ParentPhone"></div></td>
+                          </tr>
+                          <tr>
+                            <td align="right">რეგისტრაციის კოდი:</td>
+                            <td>
+                              <div
+                                style="font-weight: bold"
+                                id="st4RegistrationCode"
+                              ></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="messageAlert">
+                      <ul>
+                        <li>
+                          ეკრანზე გამოსახულ რეგისტრაციის კოდს მიიღებთ, როგორც
+                          მოკლე ტექსტური შეტყობინების, ასევე ელექტრონული ფოსტის
+                          საშუალებით
+                        </li>
+                        <li>
+                          გაითვალისწინეთ, რეგისტრაციის კოდი მნიშვნელოვანია
+                          ბავშვის შემდგომი იდენტიფიცირებისათვის!
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+                <div id="blockBody" class="bbDisabled"></div>
+
+                <div class="result">
+                  <button
+                    class="btn-action"
+                    style="width: initial"
+                    onclick="window.location.reload()"
+                  >
+                    თავიდან დაწყება
+                  </button>
+                  <div class="result-time"></div>
+                </div>
+
+                <div class="step-buttons">
+                  <button class="btn-action" id="btnFinish" name="btnFinish">
+                    დახურვა
+                  </button>
+                  <button class="btn-action" id="btnNext" name="btnNext">
+                    შემდეგი
+                  </button>
+                  <button
+                    class="btn-action btn-disabled"
+                    id="btnPrevious"
+                    name="btnPrevious"
+                    disabled=""
+                  >
+                    დაბრუნება
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="bottom">
+            <div class="footer">
+              <div class="footer-inner">
+                <a
+                  target="_blank"
+                  href="https://skolebi.emis.ge/"
+                  title="საგანმანათლებლო დაწესებულების კატალოგი"
+                >
+                  <p style="font-weight: 800">SKOLEBI.EMIS.GE</p>
+                  <div></div>
+                  <p>
+                    ᲡᲐᲒᲐᲜᲛᲐᲜᲐᲗᲚᲔᲑᲚᲝ <br />
+                    ᲓᲐᲬᲔᲡᲔᲑᲣᲚᲔᲑᲘᲡ <br />
+                    ᲙᲐᲢᲐᲚᲝᲒᲘ
+                  </p>
+                </a>
+                <a
+                  target="_blank"
+                  href="http://emis.ge/"
+                  title="განათლების მართვის საინფორმაციო სისტემა"
+                >
+                  <img
+                    src="/images/logo-emis.svg"
+                    alt="განათლების მართვის საინფორმაციო სისტემა"
+                  />
+                  <p>ᲡᲡᲘᲞ ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡ ᲛᲐᲠᲗᲕᲘᲡ ᲡᲐᲘᲜᲤᲝᲠᲛᲐᲪᲘᲝ ᲡᲘᲡᲢᲔᲛᲐ</p>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="module" src="./scripts.js"></script>
+  </body>
+</html>
